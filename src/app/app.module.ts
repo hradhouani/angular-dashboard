@@ -24,6 +24,7 @@ import {UsersComponent} from './dashboard/users/users.component';
 import {LayoutsComponent} from './dashboard/layouts/layouts.component';
 import {IndexComponent} from './dashboard/index/index.component';
 import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -36,6 +37,7 @@ import {FormsModule} from '@angular/forms';
     ],
     imports: [
         BrowserModule,
+        HttpClientModule,
         FormsModule,
         AppRoutingModule,
         BrowserAnimationsModule,

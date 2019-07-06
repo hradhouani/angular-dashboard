@@ -1,5 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {HttpClient} from '@angular/common/http';
+import {environment} from '../../../environments/environment';
+import {AuthentificationService} from '../../authentification.service';
+
+const apiUrl = environment.apiUrl;
 
 @Component({
     selector: 'app-login',
@@ -8,23 +13,18 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-    constructor(private router: Router) {
+    constructor(private router: Router, private http: HttpClient, private auth: AuthentificationService) {
     }
 
-    username: string;
-    password: string;
+    username: string = 'haythamo@hldld.com';
+    password: string = '123456789';
 
     ngOnInit() {
     }
 
     login(): void {
-        if (this.username == 'admin' && this.password == 'admin') {
 
-            localStorage.setItem('token', 'token');
-            this.router.navigate(['/users']);
-        } else {
-            alert('Invalid credentials');
-        }
+        this.auth.login({email: this.username, password: this.password});
     }
 
 }
