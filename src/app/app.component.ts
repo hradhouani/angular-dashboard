@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {setTheme} from 'ngx-bootstrap';
+
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'dashboard2';
+
+
+    constructor() {
+        setTheme('bs4');
+    }
+
+    title = 'dashboard2';
+
+
 }

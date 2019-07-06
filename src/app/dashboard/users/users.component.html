@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-header bg-white">
+
+        <h1 class="text-center w-100 h1">Users</h1>
+
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Position</th>
+                <th scope="col">Symbol</th>
+                <th scope="col">Weight</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let i of dataSource ">
+                <td> {{i.name}}</td>
+                <td scope="col">{{i.position}}</td>
+                <td scope="col">{{i.symbol}}</td>
+                <td scope="col">{{i.weight}}</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+</div>

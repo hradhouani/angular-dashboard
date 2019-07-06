@@ -1,0 +1,36 @@
+<mat-toolbar color="primary">
+
+
+    <mat-toolbar-row>
+        <span>Second Line</span>
+        <span class="example-spacer"></span>
+        <mat-icon class="example-icon" (click)="logout()" aria-hidden="false" aria-label="Example user verified icon">
+            verified_user
+        </mat-icon>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+
+<mat-sidenav-container class="example-container">
+
+        <mat-sidenav #drawer mode="side" opened role="navigation">
+            <mat-nav-list>
+                <a mat-list-item routerLink='/' [routerLinkActiveOptions]="{exact: true}"
+                   routerLinkActive="active-list-item">First Component</a>
+                <a mat-list-item routerLink='/users' [routerLinkActiveOptions]="{exact: true}"
+                   routerLinkActive="active-list-item">Second Component</a>
+            </mat-nav-list>
+        </mat-sidenav>
+
+    <mat-sidenav-content>
+
+        <div class="container-fluid ">
+            <div class="py-3">
+
+
+
+            <router-outlet></router-outlet>    </div>
+        </div>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>
